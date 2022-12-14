@@ -9,7 +9,7 @@ import joblib
 app = Flask(__name__)
 
 
-# create end point to  train your model and save training data in pickle file
+# create end point to train model and save training data in pickle file
 @app.route('/train_model')
 def train():
     # load data
@@ -26,7 +26,7 @@ def train():
     return "Model trained successfully"
 
 
-#  load pickle file and test your model, pass test data via POSt method
+#  load pickle file and test model, pass test data via POST method
 #  First we need to load pickle file for it to get training data ref
 @app.route('/test_model', methods=['POST'])
 def test():
